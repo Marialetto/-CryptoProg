@@ -11,7 +11,7 @@ using namespace std;
 using namespace CryptoPP;
 int main(int argc, char **argv)
 {
-	string Hash;
+  string Hash;
   Weak::MD5 hash;
   FileSource("test.txt", true, new HashFilter(hash, new HexEncoder(new StringSink (Hash))));
   cout<<Hash<<endl;
